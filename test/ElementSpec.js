@@ -17,4 +17,13 @@ describe('Mendeleiev element', () => {
     let e = new Element();
     expect(e.chemicalSymbol).to.be.a('string');
   });
+
+  it('should have a name', () => {
+    let e = new Element();
+    expect(e.name).to.be.a('string');
+  });
+
+  it('should create an Element by name', () => {
+    
+  });
 });

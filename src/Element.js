@@ -1,6 +1,7 @@
 const DEFAULT_VALUES = {
   atomicNumber : 1,
-  chemicalSymbol : 'H'
+  chemicalSymbol : 'H',
+  name : 'Hydrogen'
 };
 
 class Element {
@@ -8,6 +9,7 @@ class Element {
   constructor() {
     this.atomicNumber = DEFAULT_VALUES.atomicNumber
     this.chemicalSymbol = DEFAULT_VALUES.chemicalSymbol;
+    this.name = DEFAULT_VALUES.name;
   }
 }
 
