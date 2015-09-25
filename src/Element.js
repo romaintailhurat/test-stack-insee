@@ -17,6 +17,7 @@ const ELEMENTS_VALUE = {
   }
 }
 
+/* Represents an atomic element according to the Mendeleiev periodic table. */
 class Element {
 
   constructor(name = DEFAULT_VALUES.name,
