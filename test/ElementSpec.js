@@ -24,6 +24,11 @@ describe('Mendeleiev element', () => {
   });
 
   it('should create an Element by name', () => {
-    
+    let hydrogen = Element.create('hydrogen');
+    expect(hydrogen.name).to.equal('Hydrogen');
+
+    let helium = Element.create('helium');
+    expect(helium.atomicNumber).to.equal(2);
+    expect(helium.name).to.equal('Helium');
   });
 });

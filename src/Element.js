@@ -4,12 +4,34 @@ const DEFAULT_VALUES = {
   name : 'Hydrogen'
 };
 
+const ELEMENTS_VALUE = {
+  'hydrogen' : {
+    name : 'Hydrogen',
+    atomicNumber : 1,
+    chemicalSymbol : 'H'
+  },
+  'helium' : {
+    name : 'Helium',
+    atomicNumber : 2,
+    chemicalSymbol : 'He'
+  }
+}
+
 class Element {
 
-  constructor() {
-    this.atomicNumber = DEFAULT_VALUES.atomicNumber
-    this.chemicalSymbol = DEFAULT_VALUES.chemicalSymbol;
-    this.name = DEFAULT_VALUES.name;
+  constructor(name = DEFAULT_VALUES.name,
+              atomicNumber = DEFAULT_VALUES.atomicNumber,
+              chemicalSymbol = DEFAULT_VALUES.chemicalSymbol) {
+    this.name = name;
+    this.atomicNumber = atomicNumber;
+    this.chemicalSymbol = chemicalSymbol;
+  }
+
+  static create(name) {
+    let n = ELEMENTS_VALUE[name].name;
+    let atomicNumber = ELEMENTS_VALUE[name].atomicNumber;
+    let chemicalSymbol = ELEMENTS_VALUE[name].chemicalSymbol;
+    return new Element(n, atomicNumber, chemicalSymbol);
   }
 }
 
